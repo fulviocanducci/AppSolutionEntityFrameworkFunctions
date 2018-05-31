@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppPostgres", "AppPostgres\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log", "Log\Log.csproj", "{E2178B4F-A63B-49E6-B9D5-60AE7FBB6DB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSQLite", "AppSQLite\AppSQLite.csproj", "{9D2DDC8B-A5E3-477D-A203-371A6294AA32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppSQLite", "AppSQLite\AppSQLite.csproj", "{9D2DDC8B-A5E3-477D-A203-371A6294AA32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSqlServerCe40", "AppSqlServerCe40\AppSqlServerCe40.csproj", "{7957BDFA-4698-47BE-B6EF-E2B67E167B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppJetAccess", "AppJetAccess\AppJetAccess.csproj", "{6A567AE8-25A7-41B4-963B-86F064AB84CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{9D2DDC8B-A5E3-477D-A203-371A6294AA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D2DDC8B-A5E3-477D-A203-371A6294AA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D2DDC8B-A5E3-477D-A203-371A6294AA32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7957BDFA-4698-47BE-B6EF-E2B67E167B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7957BDFA-4698-47BE-B6EF-E2B67E167B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7957BDFA-4698-47BE-B6EF-E2B67E167B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7957BDFA-4698-47BE-B6EF-E2B67E167B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A567AE8-25A7-41B4-963B-86F064AB84CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A567AE8-25A7-41B4-963B-86F064AB84CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A567AE8-25A7-41B4-963B-86F064AB84CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A567AE8-25A7-41B4-963B-86F064AB84CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

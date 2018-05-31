@@ -28,10 +28,13 @@ namespace Models
                 o.Property(x => x.IsActive)
                     .IsRequired();
 
-                o.Property(x => x.Salary);                    
+                o.Property(x => x.Salary)
+                    .HasColumnType("decimal(18,2)");
 
             });
             #endregion        
         }
     }
 }
+
+//https://docs.microsoft.com/pt-br/ef/core/providers/

@@ -12,6 +12,10 @@ namespace AppSQLite
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+            Console.WriteLine("* SQLite Test                               *");
+            Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+
             LoggerFactory loggerFactory = new LoggerFactory();
             loggerFactory.AddProvider(new TraceLoggerProvider());
             DbContextOptionsBuilder<DatabaseContext> options = new DbContextOptionsBuilder<DatabaseContext>();
@@ -30,12 +34,13 @@ namespace AppSQLite
                     {
                         x.Id,
                         x.Name,
-                        Days = x.Created.AddDays(15)
+                        x.Created,
+                        Days = x.Created.AddDays(15)                        
                     })
                     .ToList()
                     .ForEach(x =>
                     {
-                        Console.WriteLine("{0:000} {1} {2}", x.Id, x.Name, x.Days);
+                        Console.WriteLine("{0:000} {1} {2} {3}", x.Id, x.Name, x.Created, x.Days);
                     });
             }
 

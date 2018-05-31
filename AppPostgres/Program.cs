@@ -11,6 +11,10 @@ namespace AppPostgres
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+            Console.WriteLine("* PosgGreSql Test                           *");
+            Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
+
             LoggerFactory loggerFactory = new LoggerFactory();
             loggerFactory.AddProvider(new TraceLoggerProvider());
             DbContextOptionsBuilder<DatabaseContext> options = new DbContextOptionsBuilder<DatabaseContext>();
@@ -27,17 +31,18 @@ namespace AppPostgres
                 //db.SaveChanges();
 
                 db.People
-                    .Where(x => x.Created.Day == 1)
+                    .Where(x => x.Created.Day >= 1)
                     .Select(x => new
                     {
                         x.Id,
                         x.Name, 
-                        x.Created
+                        x.Created,
+                        Days = x.Created.AddDays(15)                        
                     })
                     .ToList()
                     .ForEach(x =>
                     {
-                        Console.WriteLine("{0:000} {1} {2}", x.Id, x.Name, x.Created);
+                        Console.WriteLine("{0:000} {1} {2} {3}", x.Id, x.Name, x.Created, x.Days);
                     });
             }
 
